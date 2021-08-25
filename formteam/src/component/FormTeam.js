@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
-
+import '../App.css'
 const FormTeam = (props) => {
     // Create state for the form
     const [member,setMember] = useState({
         id:Date.now(),
         name:'',
         email:'',
-        role:''
+        role:'',
+        image:''
     })
 
   // create function keeps track of what you type and sends it to the state
@@ -24,37 +25,43 @@ function handleSubmit(event){
     props.addnewMember(member)
 }
 
+
     return(
-        <div>
+        <div >
+            <h1 className='secondary-header u-center'>Add New Member </h1>
             <fieldset>
-            <legend>Jion Our Member</legend>
-           <form onSubmit={handleSubmit}>
-               <label htmlFor='title'>User Name</label>
+            <legend className='para'>Jion Our Member</legend>
+           <form onSubmit={handleSubmit} className=''>
+               <label htmlFor='title' className='para'> <b>User Name</b></label>
                <input 
                type='text'
                placeholder='enter your Name'
                name='name'
                value={member.name}
                onChange={handleChange}
-               
+               required
                /> <br/>
 
-               <label htmlFor='title'>email</label>
+               <label htmlFor='title' className='para'><b>Email</b></label>
                <input 
                type='text'
                placeholder='enter your email address'
                name='email'
                value={member.email}
                onChange={handleChange}
+               required
 
                /><br/>
 
-            <label htmlFor='title'>Role</label>
+            <label htmlFor='title' className='para'><b>Role</b></label>
       
-            <select id="cars" 
+            <select
             name='role'  
-            onChange={handleChange}>
-
+            onChange={handleChange}
+            className='para u-margin-left'
+            required
+            >
+                <option value="backend engineer">select a role</option>
                 <option value="backend engineer">software engineer</option>
                 <option value="backend engineer">backend engineer</option>
                 <option value="frontend enginee">frontend enginee</option>
@@ -62,7 +69,10 @@ function handleSubmit(event){
                 <option value="designer">designer</option>
             </select> <br/>
 
-            <button type='submit'>submit</button>
+            <div className='u-center'>
+            <button type='submit' className='btn btn--white btn--animated'>submit</button>
+            </div>
+           
            </form>
            </fieldset>
         </div>

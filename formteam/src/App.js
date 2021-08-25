@@ -14,7 +14,7 @@ function App() {
   }
   return (
     <div className="App">
-      <h1>Form team </h1>
+      <h1 className='u-center  primary-header'>Form team </h1>
       <ListMember  data={team}/>
       <FormTeam addnewMember={addnewMember}/>
     </div>
