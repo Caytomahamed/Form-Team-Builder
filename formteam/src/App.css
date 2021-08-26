@@ -51,9 +51,9 @@ body{
 }
 
 .shadow {
-    box-shadow: 3px 3px 4px 3px rgba(0,0,0,0.2),
-    -3px -3px 4px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 1rem;
+    background-color: #f1f1f1;
 }
 
 .u-margin-left{
@@ -83,10 +83,12 @@ input[type=text], input[type=email] {
     color: #fff;
     position: relative; 
     background-color: green;
-    
    
 }
-
+fieldset{
+    margin-bottom: 15rem;
+    padding: 2rem 3rem;
+}
   
 .btn:hover {
     transform: translateY(-3px);

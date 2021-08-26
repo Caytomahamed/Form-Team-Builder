@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import '../App.css'
 const FormTeam = (props) => {
     // Create state for the form
+    const [value,setValue]=useState('')
     const [member,setMember] = useState({
         id:Date.now(),
         name:'',
@@ -16,6 +17,7 @@ const FormTeam = (props) => {
        const newMember ={...member, [event.target.name]: event.target.value}
 
        setMember(newMember)
+   
     }
 console.log(member);
 // Create a function that submits your form to "addnewMember" function
@@ -25,20 +27,19 @@ function handleSubmit(event){
     props.addnewMember(member)
 }
 
-
     return(
         <div >
             <h1 className='secondary-header u-center'>Add New Member </h1>
             <fieldset>
             <legend className='para'>Jion Our Member</legend>
-           <form onSubmit={handleSubmit} className=''>
+           <form onSubmit={handleSubmit} >
                <label htmlFor='title' className='para'> <b>User Name</b></label>
                <input 
                type='text'
                placeholder='enter your Name'
                name='name'
                value={member.name}
-               onChange={handleChange}
+               onChange={handleChange} 
                required
                /> <br/>
 
