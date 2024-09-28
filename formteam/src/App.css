@@ -1,0 +1,130 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+
+.primary-header{
+    font-size: 5rem;
+}
+.secondary-header{
+    font-size: 3rem;
+}
+
+.title{
+    font-size: 2.5rem;
+}
+
+.para{
+    font-size: 1.6rem;
+    
+}
+
+.row {
+    max-width: 114rem;
+    margin: 0 auto; 
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+.row [class^=col-] {
+      margin-bottom: 3rem; 
+}
+
+.row [class^=col-]:not(:last-child) {
+        margin-right: 2rem; 
+}
+
+.row .col-1-of-4 {
+    width: calc( ( 100% - 3*6rem ) / 4); 
+    height: 20rem;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: #f1f1f1;
+}
+
+.u-margin-left{
+    margin-left: 1rem;
+    padding: .4rem;
+    margin-bottom: 1rem;
+}
+input[type=text], input[type=email] {
+    width: 100%;
+    padding: 1.2rem  2rem;
+    margin: .8rem 0;
+    display: inline-block;
+    border: .1rem solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .u-center{
+      text-align: center;
+  }
+  
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1.3rem 2.5rem !important;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+    color: #fff;
+    position: relative; 
+    background-color: green;
+   
+}
+fieldset{
+    margin-bottom: 15rem;
+    padding: 2rem 3rem;
+}
+  
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+}
+
+.btn:hover::after {
+      transform: scalex(1.4) scaleY(1.6);
+      opacity: 0; 
+}
+  
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); 
+}
+  
+.btn:after {
+    content: '';
+    display: inline-block;
+    background: #Fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 1;
+    transition: all .5s; 
+    background: green; 
+}
+  
+  
+.btn--animated {
+    animation: moveButton .5s ease-out .5s;
+    animation-fill-mode: backwards; 
+}
+  
+
